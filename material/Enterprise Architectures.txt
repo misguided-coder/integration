@@ -1,0 +1,9 @@
+Enterprise Application 
+	1) Client Server Architecture (Web Application,Chat App)
+	2) Distributed Architecture (RMI,EJB,DCOM,CORBA,DCE)
+	3) Messaging Architecture
+	4) SOA Architecture
+	5) ROA (Microservice based) Architecture
+
+
+	EAI Applications

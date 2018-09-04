@@ -1,0 +1,28 @@
+1) Understanding about business use cases of these 2 or more apps
+2) How secre communication be if happening at all
+3) Which platform apps are running and can support
+4) What is the language used to develop these apps
+5) What is the data format used as output and input
+6) Which transport(protocol) is app running on and supports
+7) Is app availble always
+8) How much load app can handle at a time (request at one time)
+9) What is the response time of the app 
+10) How well transactions are managed by the app or does not 
+    support tx management at all
+11) How error conditions are dealt with
+12) Feedback management
+13) What cautions(best practices) we need to take extra while doing these     app integration
+14) How much time need to develop a solution to integrate these apps
+15) If data format is different then how to convert in right type of data      before sending to other end
+16) how well we can develop our solution as a flexible one so that any 
+    customizatios required can be done easily in hours,days but not months
+17) How scalabale our soulution is
+18) How compatable this solution is for different cloud platform or only     built to run on "In Premises"
+
+
+
+
+
+ 
+
+
