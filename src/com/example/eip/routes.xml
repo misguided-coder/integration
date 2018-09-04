@@ -17,6 +17,7 @@
 				<from uri="file://C:/camel-workspace/integration/in?noop=true" />
 				<choice>
 					<when>
+						<to></to>
 					</when>
 				</choice>
 				
