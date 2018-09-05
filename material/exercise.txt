@@ -1,0 +1,33 @@
+1) Write a camel route which will produce 5 files named as todays timestamp and 
+   content of the files will be as follows ----
+
+   <cars>
+	<vin>100</vin>
+	<vin>Audi Q7</vin>
+   <cars>
+   
+  and so on total 5 files with different car details.
+
+  then send content of these files on different queues based on car make i.e.    Audi,Maruti,BMW etc.
+
+ and then process every car info from these queues and keep the count of how many cars processed total of that type grouped by car make and keep this data in json form
+on result queue in the form of as follows ----
+
+ {
+	car:{'Make':'Audi','count':5}
+	car:{'Make':'BMW','count':7}
+	car:{'Make':'Maruti','count':3}
+	car:{'Make':'Audi','count':9}
+ }
+
+and save the info in a db also at the same time in a table called as 
+ cars_sold 
+
+
+1) How many camel components used 
+2) How many Java based processers required
+3) How many transformers required
+4) How many EIP used
+
+
+

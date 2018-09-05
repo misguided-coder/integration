@@ -69,5 +69,6 @@
 	<classpathentry kind="lib" path="lib/xml-resolver-1.2.jar"/>
 	<classpathentry kind="lib" path="lib/xmlbeans-2.5.0.jar"/>
 	<classpathentry kind="lib" path="lib/xmlschema-core-2.0.3.jar"/>
+	<classpathentry kind="lib" path="lib/camel-stream-2.10.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
