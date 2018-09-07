@@ -10,9 +10,9 @@ public class Main {
 		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/example/transform/routes.xml");
 		
 		ProducerTemplate producerTemplate = applicationContext.getBean(ProducerTemplate.class);
-		producerTemplate.sendBody("direct://NewsContent","Cricket is fun");
-		producerTemplate.sendBody("direct://NewsContent","Weather is cool");
-		producerTemplate.sendBody("direct://NewsContent","Life is cool");
+		producerTemplate.sendBody("direct://NewsContent1","Cricket is fun");
+		producerTemplate.sendBody("direct://NewsContent2","Weather is cool");
+		producerTemplate.sendBody("direct://NewsContent3","Life is cool");
 		
 		System.in.read();
 		System.out.println("Done!!!!!");

@@ -1,0 +1,4 @@
+Today is Tuesday.
+It is a fun day.
+Tomorrow is another day.
+That is also fun day.

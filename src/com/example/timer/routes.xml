@@ -8,6 +8,7 @@
 
 	<camelContext
 		xmlns="http://camel.apache.org/schema/spring">
+		<jmxAgent id="agent" createConnector="true" registryPort="2000" connectorPort="2001" mbeanServerDefaultDomain="org.apache.camel" />
 		<route>
 				<from uri="timer://TimeClock?period=5000&amp;repeatCount=10" />
 				<log message="Clock is ticking!!!"/>

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<employee eid="10">
+		<name>Mohan</name>
+		<salary>10000</salary>
+		<designation>PL</designation>
+	</employee>
+	<employee eid="11">
+		<name>Rohit</name>
+		<salary>20000</salary>
+		<designation>SE</designation>
+	</employee>
+</employees>
+

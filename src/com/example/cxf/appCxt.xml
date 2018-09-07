@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:camel="http://camel.apache.org/schema/spring"
+	xmlns:cxf="http://camel.apache.org/schema/cxf"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+						http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd">
+	
+	<cxf:cxfEndpoint id="PoliticianWebService"
+		address="http://localhost:5000/politician"
+		wsdlURL="http://localhost:5000/politician?wsdl"
+		serviceClass="com.ibm.service.PoliticianService" />
+
+	<camelContext
+		xmlns="http://camel.apache.org/schema/spring">
+	
+		<route id="wsClient">
+			<!--  from uri="file://C:/camel-workspace/integration/in/soap?noop=true" /-->
+			<from uri="timer://TimeClock?repeatCount=1" />
+            <setBody>
+                <simple>Lalu</simple>
+            </setBody>
+			<log message="${body}" />
+			<to
+				uri="cxf:bean:PoliticianWebService?defaultOperationName=fraudCount" />
+			
+			<log message="${body}"/>
+		</route>
+	</camelContext>
+</beans>

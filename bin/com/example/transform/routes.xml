@@ -6,16 +6,48 @@
 
 	<bean id="messageTransformer" class="com.example.transform.MessageTransformer" />
 
-	<camelContext
+	<camelContext trace="true"
 		xmlns="http://camel.apache.org/schema/spring">
-		<route>
-			<from uri="direct://NewsContent" />
+		<jmxAgent serviceUrlPath="ibm/camel" mbeanServerDefaultDomain="ibm.camel" id="camelAgent" registryPort="2001" createConnector="true" connectorPort="2000" />
+		<route trace="true">
+			<from uri="direct://NewsContent1" />
 			<log message="Transforming message using bean transformer!!!!!" />
 			<transform>
 				<method ref="messageTransformer" method="insertPipe"  />
 			</transform>
 			<to uri="stream:out" />	
 		</route>
+
+		<route>
+			<from uri="direct://NewsContent2" />
+			<log message="Transforming message using bean transformer!!!!!" />
+			<transform>
+				<method ref="messageTransformer" method="insertPipe"  />
+			</transform>
+			<to uri="stream:out" />	
+		</route>
+
+
+		<route>
+			<from uri="direct://NewsContent3" />
+			<log message="Transforming message using bean transformer!!!!!" />
+			<transform>
+				<method ref="messageTransformer" method="insertPipe"  />
+			</transform>
+			<to uri="stream:out" />	
+		</route>
+
+
+		<route>
+			<from uri="direct://NewsContent4" />
+			<log message="Transforming message using bean transformer!!!!!" />
+			<transform>
+				<method ref="messageTransformer" method="insertPipe"  />
+			</transform>
+			<to uri="stream:out" />	
+		</route>
+
+
 	</camelContext>
 
 </beans>
